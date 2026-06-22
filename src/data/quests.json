@@ -1,0 +1,525 @@
+[
+  {
+    "id": "q_delivery_01",
+    "type": "delivery",
+    "title": "Kayıp Deney Notları",
+    "description": "Dr. Özgür deney notlarını kütüphanede unutmuş. Kütüphaneciden al, fen hocasına götür.",
+    "subject": "Sosyal Beceri",
+    "grade": "4-8",
+    "giverNpc": "npc_fen_hoca",
+    "targetNpc": "npc_kutuphaneci",
+    "returnToNpc": "npc_fen_hoca",
+    "itemLabel": "📓 Deney Notu",
+    "dialogueStart": [
+      "Ah, mükemmel zamanlama!",
+      "Kütüphanede çok önemli deney notlarımı unutmuşum.",
+      "Yarın derste kesinlikle lazım olacak. Gidip kütüphaneciden alabilir misin?"
+    ],
+    "dialoguePickup": [
+      "Dr. Özgür'ün not defteri burada duruyordu zaten.",
+      "Al götür, iyi çalışmalar!"
+    ],
+    "dialogueComplete": [
+      "Harika, teşekkürler! Notlar olmadan dersi yapamazdım.",
+      "Sorumluluk duygun çok güçlü, bunu her zaman koru!"
+    ],
+    "hint": "Kütüphane kampüsün kuzeyinde, saat kulesinin ilerisinde.",
+    "reward": { "xp": 50, "badge": "🤝", "badgeName": "Yardımsever" },
+    "prerequisites": []
+  },
+
+  {
+    "id": "q_quiz_mat_temel",
+    "type": "quiz",
+    "title": "Matematik: Sayılar ve İşlemler",
+    "description": "Temel matematik bilgini test et.",
+    "subject": "Matematik",
+    "grade": "5-6",
+    "giverNpc": "npc_mudur",
+    "dialogueStart": [
+      "Merhaba! Matematik olimpiyatı yaklaşıyor.",
+      "Seni sınamak istiyorum — hazır mısın?",
+      "Her doğru cevap seni bir adım öne taşır!"
+    ],
+    "questions": [
+      {
+        "question": "Bir üçgenin iç açıları toplamı kaç derecedir?",
+        "options": ["90°", "180°", "270°", "360°"],
+        "correctIndex": 1,
+        "explanation": "Herhangi bir üçgeni ikiye böldüğünde iki dik üçgen elde edersin. Her dik üçgen 90° içerir, ikisi toplam 180° eder.",
+        "wrongResponse": "Yanlış. İpucu: Bir üçgeni çizgiye yasla — altındaki açı 180°'dir!",
+        "correctResponse": "✅ Doğru! Üçgenin iç açıları toplamı daima 180°'dir."
+      },
+      {
+        "question": "2³ (2 üssü 3) işleminin sonucu kaçtır?",
+        "options": ["6", "8", "9", "12"],
+        "correctIndex": 1,
+        "explanation": "Üslü sayıda taban kendisiyle üs kadar çarpılır: 2³ = 2 × 2 × 2 = 4 × 2 = 8.",
+        "wrongResponse": "Yanlış. 2×2×2 işlemini adım adım yap: 2×2=4, 4×2=8.",
+        "correctResponse": "✅ Harika! 2³ = 2×2×2 = 8."
+      },
+      {
+        "question": "12 sayısının asal çarpanları hangileridir?",
+        "options": ["2 ve 3", "2 ve 4", "3 ve 4", "1 ve 12"],
+        "correctIndex": 0,
+        "explanation": "12 = 2 × 2 × 3 = 2² × 3. Asal çarpanlar yalnızca 2 ve 3'tür. 1 asal sayı değildir, 4 ise 2²'dir.",
+        "wrongResponse": "Yanlış. 12'yi ikiye bölmeye devam et: 12→6→3. Hangi sayılar çıktı?",
+        "correctResponse": "✅ Doğru! 12 = 2² × 3 olduğundan asal çarpanlar 2 ve 3'tür."
+      },
+      {
+        "question": "Bir dikdörtgenin alanı nasıl hesaplanır?",
+        "options": ["Kenar + Kenar", "Uzunluk × Genişlik", "Çevre ÷ 4", "Taban × Yükseklik ÷ 2"],
+        "correctIndex": 1,
+        "explanation": "Dikdörtgenin alanı A = u × g formülüyle bulunur. Taban × yükseklik ÷ 2 üçgenin alanı formülüdür.",
+        "wrongResponse": "Yanlış. Dikdörtgeni küçük karelere böl; her satırdaki kare sayısını satır sayısıyla çarp.",
+        "correctResponse": "✅ Evet! Dikdörtgen Alanı = Uzunluk × Genişlik."
+      }
+    ],
+    "dialogueComplete": [
+      "Bravo! Tüm soruları başarıyla tamamladın.",
+      "Matematik olimpiyatında başarılar dilerim!"
+    ],
+    "hint": "Rektörlük binası kampüsün batısındadır.",
+    "reward": { "xp": 100, "badge": "🧮", "badgeName": "Matematik Ustası" },
+    "prerequisites": []
+  },
+
+  {
+    "id": "q_quiz_fen_hucre",
+    "type": "quiz",
+    "title": "Fen: Hücre ve Canlılar",
+    "description": "Dr. Özgür sana hücre bilimi soruyor.",
+    "subject": "Fen Bilimleri",
+    "grade": "6-7",
+    "giverNpc": "npc_fen_hoca",
+    "dialogueStart": [
+      "Teşekkürler deney notları için!",
+      "Şimdi ödül olarak biraz bilim konuşalım.",
+      "Hücre konusunu ne kadar biliyorsun?"
+    ],
+    "questions": [
+      {
+        "question": "Fotosentez hangi organelde gerçekleşir?",
+        "options": ["Mitokondri", "Ribozom", "Kloroplast", "Çekirdek"],
+        "correctIndex": 2,
+        "explanation": "Kloroplastlar içindeki klorofil pigmenti güneş ışığını yakalar. Mitokondri enerji üretir, ribozom protein sentezler, çekirdek DNA barındırır.",
+        "wrongResponse": "Yanlış. Hangi organel yeşil pigment (klorofil) taşır?",
+        "correctResponse": "✅ Doğru! Kloroplast, fotosentezin gerçekleştiği yerdir."
+      },
+      {
+        "question": "Işığın bir prizmadan geçince renge ayrılmasına ne denir?",
+        "options": ["Kırınım", "Yansıma", "Dispersiyon", "Kırılma"],
+        "correctIndex": 2,
+        "explanation": "Dispersiyon (dağılma): Beyaz ışık farkı dalga boylarına ayrılır. Gökkuşağı doğadaki en güzel dispersiyon örneğidir.",
+        "wrongResponse": "Yanlış. Gökkuşağında görülen renk ayrışmasının adını düşün.",
+        "correctResponse": "✅ Harika! Dispersiyon, ışığın bileşen renklerine ayrılmasıdır."
+      },
+      {
+        "question": "Aşağıdakilerden hangisi canlıların ortak özelliği DEĞİLDİR?",
+        "options": ["Beslenme", "Büyüme", "Hareket", "Işık yayma"],
+        "correctIndex": 3,
+        "explanation": "Tüm canlılar beslenir, büyür ve bir şekilde hareket eder (hücresel düzeyde bile). Ancak ışık yaymak (biyolüminesans) yalnızca bazı canlılara özgüdür.",
+        "wrongResponse": "Tekrar düşün. Tüm canlılarda bulunmayan özellik hangisidir?",
+        "correctResponse": "✅ Evet! Işık yaymak tüm canlıların ortak özelliği değildir."
+      }
+    ],
+    "dialogueComplete": [
+      "Fen bilgisi konusunda gerçekten etkileyicisin!",
+      "Bilim insanı adayı gibi düşünüyorsun."
+    ],
+    "hint": "Fen Laboratuvarı kampüsün kuzeydoğusundadır.",
+    "reward": { "xp": 90, "badge": "🔬", "badgeName": "Fen Bilgini" },
+    "prerequisites": ["q_delivery_01"]
+  },
+
+  {
+    "id": "q_quiz_turkce",
+    "type": "quiz",
+    "title": "Türkçe: Dil Bilgisi",
+    "description": "Kütüphaneci Türkçe bilgini sınıyor.",
+    "subject": "Türkçe",
+    "grade": "5-7",
+    "giverNpc": "npc_kutuphaneci",
+    "dialogueStart": [
+      "Kitapları getirdiğin için çok teşekkürler!",
+      "Sana küçük bir dil bilgisi testi yapmak istiyorum.",
+      "Türkçemizi ne kadar iyi kullanıyoruz, bakalım!"
+    ],
+    "questions": [
+      {
+        "question": "\"Çocuklar bahçede oynuyor\" cümlesinde özne hangisidir?",
+        "options": ["bahçede", "oynuyor", "çocuklar", "bahçede oynuyor"],
+        "correctIndex": 2,
+        "explanation": "Özne, eylemi gerçekleştiren kişi ya da nesnedir. 'Kim oynuyor?' sorusuna 'çocuklar' cevabı gelir, o hâlde özne 'çocuklar'dır.",
+        "wrongResponse": "Yanlış. 'Kim oynuyor?' diye sor — cevap özne olur.",
+        "correctResponse": "✅ Doğru! Özne eylemi yapandır: 'Çocuklar' oynuyor."
+      },
+      {
+        "question": "Aşağıdaki sözcüklerden hangisi somut isimdir?",
+        "options": ["Sevgi", "Özgürlük", "Kalem", "Mutluluk"],
+        "correctIndex": 2,
+        "explanation": "Somut isimler duyularımızla algılanabilen varlıklardır. Kalemi görebilir, tutabilirsin. Sevgi, özgürlük, mutluluk ise soyut kavramlardır.",
+        "wrongResponse": "Yanlış. Hangisini dokunarak, görerek veya duyarak algılayabilirsin?",
+        "correctResponse": "✅ Kalem somut isimdir — onu görebilir, tutabilirsin!"
+      },
+      {
+        "question": "\"Güzel\" sözcüğünün zıt anlamlısı hangisidir?",
+        "options": ["Yeni", "Çirkin", "Küçük", "Parlak"],
+        "correctIndex": 1,
+        "explanation": "Zıt anlam (karşıt anlam): Bir sözcüğün tam tersini ifade eden sözcüktür. Güzelin zıttı çirkindir.",
+        "wrongResponse": "Yanlış. Güzelin tam karşısındaki sıfat hangisidir?",
+        "correctResponse": "✅ Doğru! 'Güzel' kelimesinin zıt anlamlısı 'çirkin'dir."
+      },
+      {
+        "question": "Noktalama işareti olarak virgül (,) nerede kullanılır?",
+        "options": [
+          "Cümle sonunda",
+          "Sıralama ve duraklama yerlerinde",
+          "Soru cümlesi sonunda",
+          "Yalnızca tarihlerde"
+        ],
+        "correctIndex": 1,
+        "explanation": "Virgül: sıralama yaparken öğeler arasına, duraklama gereken yerlere ve yan cümleler arasına konur. Cümle sonu için nokta kullanılır.",
+        "wrongResponse": "Yanlış. 'Elma, armut, kiraz aldım.' cümlesinde virgül neden kullanıldı?",
+        "correctResponse": "✅ Evet! Virgül sıralama ve duraklamalarda kullanılır."
+      }
+    ],
+    "dialogueComplete": [
+      "Türkçe bilgin gerçekten güçlü!",
+      "Okumak dil gelişiminin en büyük anahtarıdır, bunu unutma."
+    ],
+    "hint": "Kütüphane kampüsün kuzeyindedir.",
+    "reward": { "xp": 85, "badge": "📖", "badgeName": "Dil Ustası" },
+    "prerequisites": []
+  },
+
+  {
+    "id": "q_collect_books",
+    "type": "collect",
+    "title": "Dağılan Ansiklopediler",
+    "description": "Rüzgarda saçılan 5 ansiklopediyi toplayıp kütüphaneye getir.",
+    "subject": "Sosyal Beceri",
+    "grade": "4-8",
+    "giverNpc": "npc_kutuphaneci",
+    "targetNpc": "npc_kutuphaneci",
+    "collectCount": 5,
+    "collectLabel": "📚 Kitap",
+    "autoComplete": true,
+    "collectiblePositions": [
+      [6, 0, -26], [-7, 0, -28], [10, 0, -24], [-4, 0, -37], [8, 0, -36]
+    ],
+    "dialogueStart": [
+      "Bugün sabah rüzgar çıktı ve ansiklopediler dışarıya saçıldı!",
+      "Her biri çok değerli. Lütfen 5 tanesini bul ve getir.",
+      "Parlayan altın sekizgenlere doğru yürü — 2 metreye yaklaşınca otomatik toplanır!"
+    ],
+    "dialogueComplete": [
+      "Tüm ansiklopedileri buldun, süpersin!",
+      "Bilgiye verdiğin değeri görüyorum."
+    ],
+    "hint": "Kitaplar kütüphanenin çevresindeki çimlere dağılmış — yaklaşınca otomatik toplanır.",
+    "reward": { "xp": 60, "badge": "📚", "badgeName": "Bilgi Koruyucu" },
+    "prerequisites": []
+  },
+
+  {
+    "id": "q_quiz_tarih",
+    "type": "quiz",
+    "title": "Sosyal Bilgiler: Tarih",
+    "description": "Müdür Yardımcısı tarih bilgini sınıyor.",
+    "subject": "Sosyal Bilgiler",
+    "grade": "6-7",
+    "giverNpc": "npc_mudur",
+    "dialogueStart": [
+      "Matematik sınavından çok başarılı çıktın!",
+      "Şimdi biraz tarih konuşalım.",
+      "Geçmişimizi bilmek geleceğimizi şekillendirir."
+    ],
+    "questions": [
+      {
+        "question": "Türkiye Cumhuriyeti hangi yılda kurulmuştur?",
+        "options": ["1919", "1920", "1923", "1938"],
+        "correctIndex": 2,
+        "explanation": "29 Ekim 1923'te Türkiye Büyük Millet Meclisi'nde Cumhuriyet ilan edildi. 1919 Kurtuluş Savaşı'nın başlangıcı, 1920 TBMM'nin açılışı, 1938 ise Atatürk'ün vefat yılıdır.",
+        "wrongResponse": "Yanlış. 29 Ekim'i hatırla — Cumhuriyet Bayramı hangi yıldan beri kutlanıyor?",
+        "correctResponse": "✅ Doğru! Türkiye Cumhuriyeti 29 Ekim 1923'te ilan edildi."
+      },
+      {
+        "question": "İpek Yolu hangi kıtaları birbirine bağlıyordu?",
+        "options": ["Asya - Afrika", "Asya - Avrupa", "Avrupa - Amerika", "Afrika - Avrupa"],
+        "correctIndex": 1,
+        "explanation": "İpek Yolu, Çin'den başlayıp Orta Asya ve Anadolu üzerinden Avrupa'ya uzanıyordu. İpek, baharat ve fikirlerin ticaretini sağladı.",
+        "wrongResponse": "Yanlış. İpek Yolu Çin'den başlıyordu — hangi kıtaya gidiyordu?",
+        "correctResponse": "✅ Evet! İpek Yolu Asya ile Avrupa'yı ticaret açısından birleştirdi."
+      },
+      {
+        "question": "Aşağıdakilerden hangisi ilk yazının kullanıldığı uygarlıktır?",
+        "options": ["Mısır", "Çin", "Sümer", "Roma"],
+        "correctIndex": 2,
+        "explanation": "Sümerler (MÖ 3500 civarı) çivi yazısını icat eden ilk uygarlıktır. Bu yazı sistemi kil tabletlere kazınırdı.",
+        "wrongResponse": "Yanlış. Mezopotamya'daki hangi uygarlık çivi yazısını icat etti?",
+        "correctResponse": "✅ Doğru! Sümerler çivi yazısını icat eden ilk uygarlıktır."
+      }
+    ],
+    "dialogueComplete": [
+      "Tarih bilgin etkileyici! Geçmişimizi iyi öğrenmişsin.",
+      "Tarihi bilen, geleceği daha iyi planlar."
+    ],
+    "hint": "Rektörlük kampüsün batısındadır.",
+    "reward": { "xp": 90, "badge": "🏛️", "badgeName": "Tarih Meraklısı" },
+    "prerequisites": []
+  },
+
+  {
+    "id": "q_project_bilim_fuari",
+    "type": "project",
+    "title": "Bilim Fuarı Projesi",
+    "description": "Fen hocasından konu al, kütüphanede araştır, Müdür'e sun.",
+    "subject": "Fen Bilimleri / Araştırma",
+    "grade": "6-8",
+    "giverNpc": "npc_fen_hoca",
+    "steps": [
+      {
+        "stepId": "get_topic",
+        "description": "Fen hocasından proje konusu al",
+        "targetNpc": "npc_fen_hoca",
+        "action": "pickup",
+        "itemLabel": "📋 Proje Konusu",
+        "dialogue": [
+          "Bu yılki bilim fuarı için harika bir konu var: 'Su Döngüsü'!",
+          "Önce kütüphanede bu konuyu araştır.",
+          "Kütüphaneciden kaynak kitap alınca konu sana daha net görünecek."
+        ]
+      },
+      {
+        "stepId": "research",
+        "description": "Kütüphaneciden kaynak kitabı al",
+        "targetNpc": "npc_kutuphaneci",
+        "action": "pickup",
+        "itemLabel": "📗 Kaynak Kitap",
+        "dialogue": [
+          "Su döngüsü için mükemmel bir kaynak kitabım var!",
+          "Buharlaşma, yoğuşma, yağış — hepsini bulacaksın.",
+          "Şimdi bu bilgilerle Müdür'e proje özetini sun."
+        ]
+      },
+      {
+        "stepId": "submit",
+        "description": "Proje özetini Müdür'e sun",
+        "targetNpc": "npc_mudur",
+        "action": "deliver",
+        "itemLabel": "📗 Kaynak Kitap",
+        "dialogue": [
+          "Su döngüsü projesi, harika bir seçim!",
+          "Buharlaşma → Yoğuşma → Yağış → Yeraltı Suyu döngüsünü anlatırsan birinci olursun.",
+          "Tebrikler, projen onaylandı!"
+        ]
+      }
+    ],
+    "dialogueStart": [
+      "Bu yıl okulumuzda bilim fuarı düzenliyoruz!",
+      "Sana üç adımlı bir görev vereceğim.",
+      "Önce konunu al, sonra araştır, sonra sun. Hazır mısın?"
+    ],
+    "dialogueComplete": [
+      "Proje onaylandı! Süreç boyunca çok başarılıydın.",
+      "Araştırma → Öğrenme → Sunum döngüsünü yaşadın. Bu hayatın her alanında işe yarar!"
+    ],
+    "hint": "Önce Fen Hocası → Kütüphane → Rektörlük sıralamasını takip et.",
+    "reward": { "xp": 120, "badge": "🏆", "badgeName": "Bilim İnsanı" },
+    "prerequisites": ["q_quiz_fen_hucre"]
+  },
+
+  {
+    "id": "q_explore_garden",
+    "type": "explore",
+    "title": "Okuma Bahçesini Keşfet",
+    "description": "Bahçıvan Nurten Hanım'ın bahsettiği gizli okuma köşesini bul.",
+    "subject": "Keşif / Bağımsız Öğrenme",
+    "grade": "4-8",
+    "giverNpc": "npc_bahcivan",
+    "targetPosition": [-10, 0, -8],
+    "targetRadius": 3.5,
+    "dialogueStart": [
+      "Merhaba, meraklı öğrenci!",
+      "Bahçemizin gizli bir köşesi var — orada tek başına okuyabilirsin.",
+      "Bağımsız okuma ve düşünme çok önemlidir.",
+      "İpucu: Kütüphanenin solundaki büyük ağacın gölgesine bak!"
+    ],
+    "dialogueComplete": [
+      "Buldun! İşte okuma bahçemiz.",
+      "Burası her gün 15 dakika kitap okumak için mükemmel bir yer.",
+      "Bağımsız okuma, hayal gücünü ve kelime dağarcığını geliştirir!"
+    ],
+    "hint": "Kütüphanenin sol tarafına yürü, büyük ağacın yanına bak.",
+    "reward": { "xp": 70, "badge": "🌳", "badgeName": "Keşifçi" },
+    "prerequisites": []
+  },
+
+  {
+    "id": "q_quiz_sanat",
+    "type": "quiz",
+    "title": "Sanat: Renk ve Tasarım",
+    "description": "Selin Hanım renk teorisi ve sanat tarihi soruyor.",
+    "subject": "Görsel Sanatlar",
+    "grade": "5-7",
+    "giverNpc": "npc_sanat_hoca",
+    "dialogueStart": [
+      "Sanat sadece çizmek değil — görmek, hissetmek ve anlamaktır.",
+      "Sana renk teorisi ve tasarım soruları soracağım.",
+      "Hazır mısın, genç sanatçı?"
+    ],
+    "questions": [
+      {
+        "question": "Kırmızı ve sarı karıştırılırsa hangi renk oluşur?",
+        "options": ["Mor", "Turuncu", "Yeşil", "Kahverengi"],
+        "correctIndex": 1,
+        "explanation": "Renk çarkında kırmızı ve sarı birincil (ana) renklerdir. İkisi karıştırılınca ikincil renk olan turuncu oluşur.",
+        "wrongResponse": "Yanlış. Sonbahar yapraklarının ve portakalın rengi nedir?",
+        "correctResponse": "✅ Doğru! Kırmızı + Sarı = Turuncu (ikincil renk)."
+      },
+      {
+        "question": "Işığın üç temel rengi (ışık modeli - RGB) hangileridir?",
+        "options": [
+          "Kırmızı, Sarı, Mavi",
+          "Kırmızı, Yeşil, Mavi",
+          "Kırmızı, Turuncu, Mor",
+          "Sarı, Cyan, Magenta"
+        ],
+        "correctIndex": 1,
+        "explanation": "Işık modelinde (RGB) üç temel renk Kırmızı (Red), Yeşil (Green) ve Mavi (Blue)'dir. Ekranlar bu üç rengin karışımıyla milyonlarca renk üretir.",
+        "wrongResponse": "Yanlış. Ekranların ve TV'lerin kullandığı renk sistemi nedir?",
+        "correctResponse": "✅ Evet! Işıkta temel renkler: Kırmızı + Yeşil + Mavi (RGB)."
+      },
+      {
+        "question": "Aşağıdakilerden hangisi sıcak renktir?",
+        "options": ["Mavi", "Mor", "Kırmızı", "Yeşil"],
+        "correctIndex": 2,
+        "explanation": "Sıcak renkler (kırmızı, sarı, turuncu) enerji, heyecan ve sıcaklık hissi verir. Soğuk renkler (mavi, yeşil, mor) ise sakinlik ve uzaklık hissi uyandırır.",
+        "wrongResponse": "Yanlış. Ateş, güneş, sıcaklık denince hangi renkler aklına gelir?",
+        "correctResponse": "✅ Doğru! Kırmızı sıcak renktir — enerji ve tutku çağrıştırır."
+      }
+    ],
+    "dialogueComplete": [
+      "Harika! Renk teorisini içselleştirmişsin.",
+      "Sanat eserlerini artık farklı gözlerle göreceksin."
+    ],
+    "hint": "Sanat Atölyesi kampüsün doğusundadır.",
+    "reward": { "xp": 75, "badge": "🎨", "badgeName": "Renk Ustası" },
+    "prerequisites": []
+  },
+
+  {
+    "id": "q_quiz_saglik",
+    "type": "quiz",
+    "title": "Sağlık Bilgisi: Vücut ve Beslenme",
+    "description": "Beden Eğitimi Hocası Kemal sağlık bilgini sınıyor.",
+    "subject": "Sağlık Bilgisi",
+    "grade": "5-7",
+    "giverNpc": "npc_beden_hoca",
+    "dialogueStart": [
+      "Sağlıklı bir beden, sağlıklı bir zihin demektir!",
+      "Sağlıklı yaşam hakkında bilgilerini test edelim.",
+      "Hazır mısın, sporcum?"
+    ],
+    "questions": [
+      {
+        "question": "Günde kaç bardak su içmek önerilir?",
+        "options": ["2-3 bardak", "4-5 bardak", "8-10 bardak", "15 bardak"],
+        "correctIndex": 2,
+        "explanation": "Yetişkinler için günde yaklaşık 2 litre (8-10 bardak) su önerilir. Su; vücut ısısını düzenler, besinleri taşır ve toksinleri atar.",
+        "wrongResponse": "Yanlış. Vücudumuzun %60'ı sudan oluşur — bu kadar suyu dengelemek için ne içmeliyiz?",
+        "correctResponse": "✅ Doğru! 8-10 bardak su, sağlıklı bir vücut için gereklidir."
+      },
+      {
+        "question": "Kemiklerin sağlıklı gelişimi için hangi mineral önemlidir?",
+        "options": ["Demir", "Kalsiyum", "Çinko", "Magnezyum"],
+        "correctIndex": 1,
+        "explanation": "Kalsiyum kemik ve dişlerin ana yapı taşıdır. Süt ve süt ürünleri, kuru yemişler kalsiyum açısından zengindir. Demir kandaki oksijeni taşır.",
+        "wrongResponse": "Yanlış. Süt içtiğinde kemiklerin güçlenir — sütün içerdiği mineral hangisidir?",
+        "correctResponse": "✅ Evet! Kalsiyum, kemik ve diş sağlığı için temel mineraldir."
+      },
+      {
+        "question": "Aşağıdakilerden hangisi aerobik egzersizdir?",
+        "options": ["Ağırlık kaldırma", "Şınav çekme", "Yüzme", "Bilek güreşi"],
+        "correctIndex": 2,
+        "explanation": "Aerobik egzersizler oksijen kullanarak enerji üretir ve kalp-akciğer sistemini güçlendirir. Yüzme, koşu, bisiklet aerobik egzersizlerdir. Ağırlık kaldırma anaerobiktir.",
+        "wrongResponse": "Yanlış. Kalp atışını ve nefes almayı uzun süre artıran egzersiz türü hangisidir?",
+        "correctResponse": "✅ Doğru! Yüzme, kalp-damar sistemini güçlendiren aerobik bir egzersizdir."
+      }
+    ],
+    "dialogueComplete": [
+      "Vay be! Sağlık bilgin çok iyi.",
+      "Sağlıklı yaşam bir alışkanlıktır — bugün başla!"
+    ],
+    "hint": "Spor Salonu kampüsün güneybatısındadır.",
+    "reward": { "xp": 75, "badge": "💪", "badgeName": "Sağlıklı Yaşam Elçisi" },
+    "prerequisites": []
+  },
+
+  {
+    "id": "q_delivery_food",
+    "type": "delivery",
+    "title": "Öğretmenler Odası Yemeği",
+    "description": "Mehmet Usta'nın hazırladığı yemeği Müdür'e götür.",
+    "subject": "Sosyal Beceri",
+    "grade": "4-8",
+    "giverNpc": "npc_asci",
+    "targetNpc": "npc_mudur",
+    "returnToNpc": null,
+    "itemLabel": "🍲 Yemek Tepsisi",
+    "dialogueStart": [
+      "Ah, tam zamanında geldin!",
+      "Öğretmenler odası yemeği hazır ama götüremiyorum.",
+      "Müdür Yardımcısına götürebilir misin? Soğumadan!"
+    ],
+    "dialoguePickup": null,
+    "dialogueComplete": [
+      "Tam zamanında geldin, çok teşekkürler!",
+      "Mehmet Usta'ya da selamlarımı ilet."
+    ],
+    "hint": "Rektörlük kampüsün batısındadır.",
+    "reward": { "xp": 45, "badge": "🍽️", "badgeName": "Güvenilir Kurye" },
+    "prerequisites": []
+  },
+
+  {
+    "id": "q_quiz_matematik2",
+    "type": "quiz",
+    "title": "Matematik: Kesirler ve Oran",
+    "description": "Müdür daha zorlu matematik soruları soruyor.",
+    "subject": "Matematik",
+    "grade": "6-7",
+    "giverNpc": "npc_mudur",
+    "dialogueStart": [
+      "İlk matematik sınavını geçtin, aferin!",
+      "Şimdi biraz daha zorlu sorular var.",
+      "Kesirler ve oranlar — hazır mısın?"
+    ],
+    "questions": [
+      {
+        "question": "1/2 + 1/4 işleminin sonucu kaçtır?",
+        "options": ["2/6", "1/3", "3/4", "2/4"],
+        "correctIndex": 2,
+        "explanation": "Ortak paydaya getir: 1/2 = 2/4. Sonra 2/4 + 1/4 = 3/4. Paylar toplanır, payda değişmez.",
+        "wrongResponse": "Yanlış. Önce ortak paydaya getir: 1/2'yi 2/4 yap, sonra topla.",
+        "correctResponse": "✅ Doğru! 1/2 + 1/4 = 2/4 + 1/4 = 3/4."
+      },
+      {
+        "question": "20 öğrencinin 5'i kırmızı tişört giyiyor. Kırmızı tişört giyenlerin oranı nedir?",
+        "options": ["%15", "%20", "%25", "%30"],
+        "correctIndex": 2,
+        "explanation": "Oran = (parça / bütün) × 100. 5/20 × 100 = 25%. Yani öğrencilerin %25'i kırmızı tişört giyiyor.",
+        "wrongResponse": "Yanlış. 5 ÷ 20 işlemini yap, sonucu 100 ile çarp.",
+        "correctResponse": "✅ Evet! 5 ÷ 20 = 0,25 → %25."
+      }
+    ],
+    "dialogueComplete": [
+      "Kesirler ve oranları rahatça çözüyorsun!",
+      "Matematik düşüncesi her alanda işine yarar."
+    ],
+    "hint": "Rektörlük binası kampüsün batısındadır.",
+    "reward": { "xp": 80, "badge": "📐", "badgeName": "Oran Ustası" },
+    "prerequisites": ["q_quiz_mat_temel"]
+  }
+]
